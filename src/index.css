@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu ul li {
+    position: relative;
+  }
+.menu ul li::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color:rgb(241 104 139);
+    transition: all .5s;
+    border-radius: 10px;
+  }
+  
+  .menu ul li:hover::before {
+    width: 100%;
+  }
+  
+  .menu ul li.current::before {
+    background-color: transparent;
+    width: 100%;
+  }
